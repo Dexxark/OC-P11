@@ -8,13 +8,22 @@ const EditUserInfos = ({ setIsEditing }) => {
   const userProfile = useSelector((state) => state.user.userProfile);
 
   const [userName, setUserName] = useState(userProfile.userName);
+  const [isEmpty, setIsEmpty] = useState(false); 
 
   const handleSave = async () => {
-    if (userName !== '') {
+    if (userName) {
       dispatch(updateUserName(userName));
       setIsEditing(false);
+    } else {
+      setIsEmpty(true);
     }
   };
+
+  let errorMessage = null;
+
+  if (isEmpty) {
+    errorMessage = <p className="error-edit">{"The username can't be empty"}</p>;
+  }
 
   const handleCancel = () => {
     setIsEditing(false);
@@ -35,6 +44,7 @@ const EditUserInfos = ({ setIsEditing }) => {
         <label htmlFor="lastName">Last Name :</label>
         <input type="text" id="lastName" value={userProfile.lastName} className='disabled' disabled/>
       </div>
+      {errorMessage}
       <div className="buttons-form">
         <button onClick={handleSave}>Save</button>
         <button onClick={handleCancel}>Cancel</button>

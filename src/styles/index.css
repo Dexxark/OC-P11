@@ -348,3 +348,13 @@ body {
 .main-nav .fa {
   margin-right: 5px;
 }
+
+.error-sign {
+  color: red;
+}
+
+.error-edit {
+  margin: 0px;
+  padding-top: 5px;
+  color: red;
+}

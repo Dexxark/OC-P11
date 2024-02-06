@@ -20,7 +20,7 @@ const SignIn = () => {
   let errorMessage = null;
 
   if (loginError) {
-    errorMessage = <p style={{color: 'red'}}>{loginError}</p>;
+    errorMessage = <p className="error-sign">{loginError}</p>;
   }
 
   return (

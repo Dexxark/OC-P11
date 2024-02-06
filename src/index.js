@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './reducers/rootReducer';
 import { Provider } from 'react-redux';
+import rootReducer from './reducers/rootReducer';
 
 import './styles/index.css';
 
