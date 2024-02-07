@@ -153,6 +153,13 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.page_login {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .sign-in-button {
   display: block;
   width: 100%;
@@ -215,6 +222,13 @@ body {
 .footer-text {
   margin: 0;
   padding: 0;
+}
+
+.page_account {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .account {
